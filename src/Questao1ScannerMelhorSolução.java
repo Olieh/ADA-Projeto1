@@ -1,7 +1,7 @@
 import java.util.Calendar;
 import java.util.Scanner;
 
-public class Questao1Scanner {
+public class Questao1ScannerMelhorSolução {
 
 //--ENUNCIADO------------------------------------------------------------------------
 //    1º - Crie um programa que solicite os dados do usuario:
@@ -33,10 +33,9 @@ public class Questao1Scanner {
         String cidade = entrada.nextLine();
 
         System.out.println("Digite o seu ano de nascimento: ");
-        int anoNascimento = entrada.nextInt();
+        int anoNascimento = Integer.parseInt(entrada.nextLine());
 
         System.out.println("Digite o nome de sua mãe: ");
-//        sem solução: essa linha não funciona por conta do metodo nextInt() anterior
         String mae = entrada.nextLine();
 
         //PROCESSAMENTO-DE-DADOS----------------------------------------------------------------------------------------
@@ -48,17 +47,6 @@ public class Questao1Scanner {
         //SAIDA-DE-DADOS------------------------------------------------------------------------------------------------
         System.out.println("RESULTADO DA MENSAGEM: Ola, " + nome + ". A sua idade é " + idade + " anos. A sua cidade é " + cidade + ". O nome da sua mãe é " + mae);
 
-        //PROBLEMA-E-SOLUÇÃO--------------------------------------------------------------------------------------------
-//        PROBLEMA COM nextInt APOS FAZER O next(): ---------------------------------------------
-//        fazer next() do nome depois fazer next() da cidade e por final fazer nextInd() ano nascimento causa um erro
-//        no nextInd().
-//
-//        Solução encontrada: -------------------------------------------------------------------
-//        O único método que consome a quebra de linha é o nextLine().
-//        Se você fizer next(), nextInt() ou nextDouble(), precisa fazer um nextLine() em seguida,
-//        para consumir a quebra de linha que ficou no buffer.
-//        Outra opção é usar somente o método nextLine() e fazer parsing do resultado.
 
-//        font: https://www.guj.com.br/t/problema-com-next-nextline/359071/2
     }
 }

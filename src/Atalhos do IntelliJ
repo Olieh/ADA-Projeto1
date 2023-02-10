@@ -46,3 +46,5 @@ Ctrl + Q: Documentação rápida
 Ctrl + / ou Ctrl + Shift + /: Comentar código
 Ctrl + Shift + Alt + T: Métodos de refatoração
 Ctrl + Alt + O: Reajustar imports da classe (remove imports não utilizados)
+
+TRANSFORMAR O TEXTO SELECIONADO EM MAIÚSCULAS: Ctrl + Shift + U
