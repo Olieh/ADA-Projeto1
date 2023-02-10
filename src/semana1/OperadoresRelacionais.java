@@ -1,3 +1,5 @@
+package semana1;
+
 public class OperadoresRelacionais {
     public static void main(String[] args) {
 
