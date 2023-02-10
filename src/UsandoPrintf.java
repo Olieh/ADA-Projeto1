@@ -10,6 +10,15 @@ public class UsandoPrintf {
         System.out.print("Informe a idade:");
         int idade = Integer.parseInt(scanner.nextLine());
 
-        System.out.printf("Ola %s, sua idade é %d", nome, idade);
+        System.out.printf("1º - Ola %s, sua idade é %d", nome, idade);
+
+//        Formatacao de saida
+//        s – formats strings
+//        d – formats decimal integers
+//        f – formats the floating-point numbers
+//        t – formats date/time values
+
+        String mensagem = String.format("\n2º - Ola %s, sua idade é %d", nome, idade);
+        System.out.println(mensagem);
     }
 }
