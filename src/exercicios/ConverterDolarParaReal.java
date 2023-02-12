@@ -9,7 +9,8 @@ import java.util.Scanner;
 public class ConverterDolarParaReal {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
-        @SuppressWarnings("deprecation") Locale local = new Locale("en", "US");
+        @SuppressWarnings("deprecation")
+        Locale local = new Locale("en", "US");
         NumberFormat formataValores = NumberFormat.getCurrencyInstance(local);
 
         System.out.print("Digite o valor da cotação do dólar: ");
