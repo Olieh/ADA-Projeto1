@@ -1,4 +1,4 @@
-package semana1;
+package EstudoIndividual;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
