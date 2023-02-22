@@ -1,0 +1,10 @@
+DEFINIR ATALHOS DE TECLADO PERSONALIZADOS NO INTELLIJ IDEA. AQUI ESTÁ COMO VOCÊ PODE FAZÊ-LO:
+
+Acesse o menu "File" e selecione "Settings" (ou pressione "Ctrl + Alt + S" no Windows/Linux ou "Cmd + , " no MacOS).
+No menu da esquerda, selecione "Keymap".
+Na lista de ações disponíveis, pesquise a ação que você deseja atribuir a um atalho.
+Clique com o botão direito do mouse na ação e selecione "Add Keyboard Shortcut".
+Pressione a combinação de teclas que você deseja usar como atalho.
+Clique em "Apply" e "OK" para salvar as alterações.
+
+alt + shift + q = comentar
