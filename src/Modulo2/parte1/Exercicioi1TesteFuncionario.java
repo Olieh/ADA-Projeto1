@@ -6,8 +6,8 @@ public class Exercicioi1TesteFuncionario {
         funcionario1.matricula = 10992;
         funcionario1.nome = "João";
         funcionario1.cargo = "PROGRAMADOR";
-        funcionario1.salario_hora = 15 ;
-        funcionario1.quantidade_hora = 160;
+        funcionario1.salarioHora = 15 ;
+        funcionario1.quantidadeHora = 160;
         funcionario1.mostrarDados();
     }
 }
