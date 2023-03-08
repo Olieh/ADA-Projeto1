@@ -1,4 +1,4 @@
-package Modulo2.parte1;
+package modulo2.parte1;
 
 public class Exercicioi1TesteFuncionario {
     public static void main(String[] args) {

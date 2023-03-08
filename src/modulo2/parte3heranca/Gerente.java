@@ -1,4 +1,4 @@
-package heranca;
+package modulo2.parte3heranca;
 
 // O gerente deve, além de cadastrar os seus dados, calcular
 // quantas horas a mais ele trabalhou na semana, considerando

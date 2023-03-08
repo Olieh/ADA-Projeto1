@@ -1,4 +1,4 @@
-package heranca;
+package modulo2.parte3heranca;
 
 // Mostrar na tela todos os dados inseridos e calculados.
 // Criar, além do menu principal, a opção do usuário SAIR

@@ -1,4 +1,4 @@
-package heranca;
+package modulo2.parte3heranca;
 
 //  O estagiário entra com as horas de estágio na semana, quantos
 //  meses ele estagiou e calcula-se quantas horas ele estagiou

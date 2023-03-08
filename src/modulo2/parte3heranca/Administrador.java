@@ -1,4 +1,4 @@
-package heranca;
+package modulo2.parte3heranca;
 
 // O administrativo deve calcular o seu salário, com
 // base em horas trabalhadas, horas extras e o valor da hora trabalhada.

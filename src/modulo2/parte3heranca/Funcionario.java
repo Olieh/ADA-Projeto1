@@ -1,4 +1,4 @@
-package heranca;
+package modulo2.parte3heranca;
 
 public class Funcionario {
     private String nome;
