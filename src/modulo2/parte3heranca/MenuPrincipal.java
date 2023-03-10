@@ -35,7 +35,6 @@ public class MenuPrincipal {
                     administrador.setValorHora(Double.parseDouble(leitor.nextLine()));
                     System.out.print("Informe a hora trabalhada: ");
                     administrador.setHorasDiariaTrabalhada(Integer.parseInt(leitor.nextLine()));
-                    administrador.setSalario(administrador.getValorHora() * administrador.getHorasDiariaTrabalhada());
                     System.out.println("--------------------");
                     System.out.println("RESULTADO DO OBJETO: ");
                     System.out.println(administrador.toString());

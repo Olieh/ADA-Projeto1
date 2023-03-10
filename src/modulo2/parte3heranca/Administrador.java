@@ -5,7 +5,7 @@ package modulo2.parte3heranca;
 
 public class Administrador extends Funcionario{
     private double valorHora;
-    private double salario;
+    private int horaExtra;
 
     public double getValorHora() {
         return valorHora;
@@ -15,18 +15,23 @@ public class Administrador extends Funcionario{
         this.valorHora = valorHora;
     }
 
-    public double getSalario() {
-        return salario;
+    public int getHoraExtra() {
+        return horaExtra;
     }
 
-    public void setSalario(double salario) {
-        this.salario = salario;
+    public void setHoraExtra(int horaExtra) {
+        this.horaExtra = horaExtra;
+    }
+
+    public double calcularSalrio(){
+        double salario = (getHorasDiariaTrabalhada() * getValorHora()) + (getValorHora() * getHoraExtra());
+        return salario;
     }
 
     @Override
     public String toString() {
         return "\n valorHora=" + valorHora +
-                "\n salario=" + salario +
+                "\n salario=" + calcularSalrio() +
                 super.toString();
     }
 }
