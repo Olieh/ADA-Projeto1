@@ -80,7 +80,7 @@ public class Aplicacao {
         System.out.println("### Pessoa Juridica ####################################################################");
         int tipoConta = 0;
         // tipoContaPJ    -->      [1 - conta Corrente]        [2 - conta Investimento]
-        tipoConta = escolherTipoConta(1);
+        tipoConta = escolherTipoContaPJ();
         if (tipoConta != 0) {
             cadastrarContaPJ(tipoConta);
         }
@@ -108,7 +108,7 @@ public class Aplicacao {
         System.out.println("### Pessoa Fisica ######################################################################");
         int tipoConta = 0;
         // tipoConta    -->     [1 - conta Poupança]    [2 - conta Corrente]    [3 - conta Investimento]
-        tipoConta = escolherTipoConta("a");
+        tipoConta = escolherTipoContaPF();
         if (tipoConta != 0) {
             cadastrarContaPF(tipoConta);
         }
@@ -136,8 +136,7 @@ public class Aplicacao {
         listaConta.add(conta);
     }
 
-    // SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA
-    private static int escolherTipoConta(String letra) {
+    private static int escolherTipoContaPF() {
         int tipoConta = 0;
         while (true) {
             System.out.println("Informe o tipo de conta:");
@@ -161,8 +160,7 @@ public class Aplicacao {
         }
     }
 
-    // SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA
-    private static int escolherTipoConta(int numero) {
+    private static int escolherTipoContaPJ() {
         int tipoConta;
         while (true) {
             System.out.println("Informe o tipo de conta:");
