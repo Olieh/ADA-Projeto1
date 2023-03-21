@@ -3,6 +3,15 @@ package trabalho;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/*
+    herança         = (Classe) Conta herda de (Classe) Pessoa
+    encapsulamento  = (Classe) Conta & Pessoa
+    sobrecarga      = (Classe) Aplicação --> (metodos) cadastrarContaPF() & cadastrarContaPJ()
+    sobrescrita     = (Classe) ContaPoupanca --> (metodos) depositar() & sacar() & transferencia()
+    classe abstrata = (Classe) Pessoa
+    arrays          = (Classe) Aplicação --> listaConta = new ArrayList<Conta>()
+    try catch       = (Classe) Aplicação --> (metodo) capturaOpcaoMenu()
+ */
 public class Aplicacao {
     public static Scanner leitor;
     public static ArrayList<Conta> listaConta;
@@ -201,14 +210,19 @@ public class Aplicacao {
             System.out.println("[2] - Logar ");
             System.out.println("[3] - Mostrar Lista de Conta ");
             return Integer.parseInt(leitor.nextLine());
+        } catch (NumberFormatException excecao) {
+            System.out.println("########################################################################################");
+            System.out.println("Ocorreu uma exceção: " + excecao.getMessage());
+            System.out.println("Tipo de exceção: " + excecao.getClass().getName());
+            System.out.println("Favor informar apenas numero!");
+            return 9;
         } catch (Exception excecao) {
             System.out.println("########################################################################################");
             System.out.println("Exceção de formatação no MENU PRINCIPAL ");
             System.out.println("Ocorreu uma exceção: " + excecao.getMessage());
             System.out.println("Tipo de exceção: " + excecao.getClass().getName());
-            System.out.println("Pilha de chamadas: ");
             excecao.printStackTrace();
-            return 0;
+            return 9;
         }
     }
 
