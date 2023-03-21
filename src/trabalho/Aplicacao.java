@@ -11,6 +11,8 @@ import java.util.Scanner;
     classe abstrata = (Classe) Pessoa
     arrays          = (Classe) Aplicação --> listaConta = new ArrayList<Conta>()
     try catch       = (Classe) Aplicação --> (metodo) capturaOpcaoMenu()
+
+    obs: descomentar nessa Classe o (metodo) popularListaConta() para fazer os testes;
  */
 public class Aplicacao {
     public static Scanner leitor;
