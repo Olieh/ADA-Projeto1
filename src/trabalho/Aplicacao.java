@@ -16,7 +16,7 @@ public class Aplicacao {
         menuPrincipal:
         while (true) {
             // opcaoMenu    -->     [0 = sair]    [1 = abrir conta]      [2 = logar]    [3 - mostrar a lista de conta]
-            opcaoMenu = getOpcaoMenu();
+            opcaoMenu = capturaOpcaoMenu();
             switch (opcaoMenu) {
                 case 0:
                     System.out.println("########################################################################################");
@@ -194,7 +194,7 @@ public class Aplicacao {
         return tipoPessoa;
     }
 
-    private static int getOpcaoMenu() {
+    private static int capturaOpcaoMenu() {
         // TRY-CATCH TRY-CATCH TRY-CATCH TRY-CATCH TRY-CATCH TRY-CATCH TRY-CATCH TRY-CATCH TRY-CATCH TRY-CATCH TRY-CATCH
         try {
             System.out.println("###-MENU-PRINCIPAL-#####################################################################");
