@@ -105,12 +105,11 @@ public class Conta extends Pessoa {
             }
         } else {
             if (valor <= saldo) {
-                System.out.println("########################################################################################");
                 this.saldo -= valor;
                 contaDestino.depositar(valor);
+                System.out.println("########################################################################################");
                 System.out.println("Sua transferencia de " + valor + " de " + getNome() + " para " + contaDestino.getNome() + " foi realizada com sucesso!");
             } else {
-                System.out.println("########################################################################################");
                 System.out.println("Valor que deseja sacar não esta disponivel em sua conta!");
             }
         }
