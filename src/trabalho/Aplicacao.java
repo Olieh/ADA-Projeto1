@@ -1,6 +1,7 @@
 package trabalho;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /*
@@ -23,10 +24,10 @@ public class Aplicacao {
         listaConta = new ArrayList<Conta>();
         int opcaoMenu = 0;
 
-//        popularListaConta();
+        popularListaConta();
         menuPrincipal:
         while (true) {
-            // opcaoMenu    -->     [0 = sair]    [1 = abrir conta]      [2 = logar]    [3 - mostrar a lista de conta]
+            // opcaoMenu    -->     [0 = sair]    [1 = abrir conta]      [2 = logar]    [3 - mostrar a lista de conta]  [4 - Organizar por nome ]   [5 - Organizar por idade ]
             opcaoMenu = capturaOpcaoMenu();
             switch (opcaoMenu) {
                 case 0:
@@ -80,6 +81,12 @@ public class Aplicacao {
                     for (Conta conta : listaConta) {
                         System.out.println("# " + conta);
                     }
+                    break;
+                case 4:
+                    Collections.sort(listaConta);
+                    break;
+                case 5:
+                    Collections.sort(listaConta, Conta.compararPorIdade());
                     break;
             }
         }
@@ -211,6 +218,8 @@ public class Aplicacao {
             System.out.println("[1] - Abrir conta ");
             System.out.println("[2] - Logar ");
             System.out.println("[3] - Mostrar Lista de Conta ");
+            System.out.println("[4] - Organizar por nome ");
+            System.out.println("[5] - Organizar por Idade ");
             return Integer.parseInt(leitor.nextLine());
         } catch (NumberFormatException excecao) {
             System.out.println("########################################################################################");
@@ -283,23 +292,23 @@ public class Aplicacao {
     }
 
     private static void popularListaConta() {
-        Conta conta1 = new ContaPoupanca("nome1", 21, "11111111111", "11111", 0, "111");
-        Conta conta2 = new ContaPoupanca("nome2", 22, "22222222222", "22222", 0, "222");
-        Conta conta3 = new ContaPoupanca("nome3", 23, "33333333333", "33333", 0, "333");
-        Conta conta4 = new ContaCorrente("nome4", 24, null, "44444444444", "44444", 0, "444");
+        Conta conta1 = new ContaPoupanca("nome1", 29, "11111111111", "91111", 0, "111");
+        Conta conta2 = new ContaPoupanca("nome2", 28, "22222222222", "82222", 0, "222");
+        Conta conta3 = new ContaPoupanca("nome3", 27, "33333333333", "73333", 0, "333");
+        Conta conta4 = new ContaCorrente("nome4", 26, null, "44444444444", "64444", 0, "444");
         Conta conta5 = new ContaCorrente("nome5", 25, null, "55555555555", "55555", 0, "555");
-        Conta conta6 = new ContaCorrente("nome6", 0, "6666666666666", null, "66666", 0, "666");
-        Conta conta7 = new ContaCorrente("nome7", 0, "7777777777777", null, "77777", 0, "777");
-        Conta conta8 = new ContaInvestimento("nome8", 28, null, "88888888888", "88888", 0, "888");
-        Conta conta9 = new ContaInvestimento("nome9", 0, "9999999999999", null, "99999", 0, "999");
+        Conta conta6 = new ContaCorrente("nome6", 0, "6666666666666", null, "46666", 0, "666");
+        Conta conta7 = new ContaCorrente("nome7", 0, "7777777777777", null, "37777", 0, "777");
+        Conta conta8 = new ContaInvestimento("nome8", 22, null, "88888888888", "28888", 0, "888");
+        Conta conta9 = new ContaInvestimento("nome9", 0, "9999999999999", null, "19999", 0, "999");
         listaConta.add(conta1);
         listaConta.add(conta2);
         listaConta.add(conta3);
         listaConta.add(conta4);
-        listaConta.add(conta5);
-        listaConta.add(conta6);
         listaConta.add(conta7);
         listaConta.add(conta8);
         listaConta.add(conta9);
+        listaConta.add(conta5);
+        listaConta.add(conta6);
     }
 }

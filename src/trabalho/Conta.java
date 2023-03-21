@@ -1,6 +1,8 @@
 package trabalho;
 
-public class Conta extends Pessoa {
+import java.util.Comparator;
+
+public class Conta extends Pessoa implements Comparable<Conta>{
     // ATRIBUTOS #######################################################################################################
     private String matricula;
     private double saldo;
@@ -120,5 +122,20 @@ public class Conta extends Pessoa {
         System.out.println("########################################################################################");
         System.out.println("Realizando Consulta..." + getClass().getSimpleName().toUpperCase() + " DO(A) " + this.getNome().toUpperCase());
         System.out.println("Saldo do " + this.getNome() + " é: R$" + saldo);
+    }
+
+    @Override
+    public int compareTo(Conta conta) {
+        return this.getNome().compareTo(conta.getNome());
+    }
+
+    // esse metodo vai ser usado quando
+    public static Comparator<Conta> compararPorIdade() {
+        return new Comparator<Conta>() {
+            @Override
+            public int compare(Conta conta1, Conta conta2) {
+                return Integer.compare(conta1.getIdade(), conta2.getIdade());
+            }
+        };
     }
 }
