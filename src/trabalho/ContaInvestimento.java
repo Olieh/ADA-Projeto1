@@ -23,15 +23,17 @@ public class ContaInvestimento extends Conta {
     @Override
     public void depositar(double valor) {
         if (this.getCNPJ() != null) {
-            System.out.println("Depositando..." + getClass().getSimpleName().toUpperCase() + " DO " + this.getNome().toUpperCase());
+            System.out.println("########################################################################################");
+            System.out.println("Depositando..." + getClass().getSimpleName().toUpperCase() + " DO(A) " + this.getNome().toUpperCase());
             setSaldo(getSaldo() + (valor + (valor * 0.04)));
-            System.out.println("O deposito de " + valor + " do " + getNome() + " foi efetuado com sucesso! Obs: " + (valor + (valor * 0.04)) + " a mais por conta do investimento de 4%");
-            System.out.println("__________________________________________________________________________");
+            System.out.println("O deposito de " + valor + " do " + getNome() + " foi efetuado com sucesso!");
+            System.out.println("Obs: O dono é PJ e recebe 4% nessa conta, o que equivale a " + (valor * 0.04));
         } else {
-            System.out.println("Depositando..." + getClass().getSimpleName().toUpperCase() + " DO " + this.getNome().toUpperCase());
+            System.out.println("########################################################################################");
+            System.out.println("Depositando..." + getClass().getSimpleName().toUpperCase() + " DO(A) " + this.getNome().toUpperCase());
             setSaldo(getSaldo() + (valor + (valor * 0.02)));
-            System.out.println("O deposito de " + valor + " do " + getNome() + " foi efetuado com sucesso! Obs: " +( valor + (valor * 0.02)) + " a mais por conta do investimento de 2%");
-            System.out.println("__________________________________________________________________________");
+            System.out.println("O deposito de " + valor + " do " + getNome() + " foi efetuado com sucesso! ");
+            System.out.println("Obs: O dono é PF e recebe 2% nessa conta, o que equivale a " + (valor * 0.02));
         }
     }
 
