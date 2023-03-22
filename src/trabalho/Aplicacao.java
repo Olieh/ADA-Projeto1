@@ -63,17 +63,21 @@ public class Aplicacao {
                     String login = leitor.nextLine();
                     System.out.println("Senha:");
                     String senha = leitor.nextLine();
+                    String msg = "Login ou Senha incorreta!";
                     for (Conta conta : listaConta) {
                         if (conta.getCNPJ() != null) {
                             if (conta.getCNPJ().equals(login) && conta.getSenha().equals(senha)) {
-                                    menuConta(conta);
+                                menuConta(conta);
+                                msg = "Login e Logout realizado com sucesso!";
                             }
                         } else {
                             if (conta.getCPF().equals(login) && conta.getSenha().equals(senha)) {
-                                    menuConta(conta);
+                                menuConta(conta);
+                                msg = "Login e Logout realizado com sucesso!";
                             }
                         }
                     }
+                    System.out.println(msg);
                     break;
                 case 3:
                     System.out.println("########################################################################################");
@@ -103,6 +107,7 @@ public class Aplicacao {
             cadastrarContaPJ(tipoConta);
         }
     }
+
     // SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA
     private static void cadastrarContaPJ(int tipoConta) {
         System.out.println("Informe o nome:");
@@ -121,6 +126,7 @@ public class Aplicacao {
         }
         listaConta.add(conta);
     }
+
     // SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA
     private static void cadastrarContaPF() {
         System.out.println("### Pessoa Fisica ######################################################################");
@@ -131,6 +137,7 @@ public class Aplicacao {
             cadastrarContaPF(tipoConta);
         }
     }
+
     // SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA SOBRECARGA
     private static void cadastrarContaPF(int tipoConta) {
         System.out.println("Informe o nome:");
@@ -239,9 +246,10 @@ public class Aplicacao {
 
     private static void menuConta(Conta conta) {
         int op = 0;
-        menuDaConta : while (true) {
+        menuDaConta:
+        while (true) {
             double valor = 0;
-            System.out.println("###-MENU-DA-"+ conta.getClass().getSimpleName().toUpperCase() + "-DO(A)-" + conta.getNome().toUpperCase()+"-###############################################################################");
+            System.out.println("###-MENU-DA-" + conta.getClass().getSimpleName().toUpperCase() + "-DO(A)-" + conta.getNome().toUpperCase() + "-###############################################################################");
             System.out.println("[0] - Sair");
             System.out.println("[1] - Sacar ");
             System.out.println("[2] - Depositar");
