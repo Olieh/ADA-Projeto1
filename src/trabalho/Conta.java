@@ -129,11 +129,20 @@ public class Conta extends Pessoa implements Comparable<Conta>{
         return this.getNome().compareTo(conta.getNome());
     }
 
-    // esse metodo vai ser usado quando
+    // REVER ESSE CODIGO FUTURAMENTE!! SÓ FIZ ISSO PORQUE NAO ENCONTREI A MELHOR FORMA PARA TER 2 OU MAIS METODO PARA ORDENAR POR (IDADE) OU POR (NOME);
+    // Declaramos um método chamado compararPorIdade, que é público e estático, ou seja, pode ser acessado sem criar uma
+    // instância da classe e é compartilhado por todas as instâncias da classe. O método retorna um objeto do tipo Comparator<Pessoa>.
     public static Comparator<Conta> compararPorIdade() {
+        // Estamos criando um objeto anônimo (sem nome) que implementa a interface Comparator<Pessoa>. Este objeto será
+        // retornado pelo método compararPorIdade()
         return new Comparator<Conta>() {
+            // Esta anotação indica que o método que vem a seguir é uma implementação de um método da interface Comparator
             @Override
+            // Aqui, estamos definindo o método compare que será utilizado para comparar dois objetos da classe Pessoa,
+            // p1 e p2. Este método retorna um valor inteiro, que pode ser negativo, zero ou positivo, dependendo do resultado da comparação.
             public int compare(Conta conta1, Conta conta2) {
+                // Nesta linha, estamos usando o método Integer.compare(), que compara dois valores inteiros. No nosso caso,
+                // estamos comparando as idades das duas pessoas
                 return Integer.compare(conta1.getIdade(), conta2.getIdade());
             }
         };
