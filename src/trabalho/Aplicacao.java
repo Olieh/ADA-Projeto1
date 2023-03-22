@@ -209,8 +209,8 @@ public class Aplicacao {
     private static int getTipoPessoa() {
         int tipoPessoa;
         System.out.println("### ABRINDO CONTA ######################################################################");
-        System.out.println("Informe o tipo de conta que deseja abrir:");
-        System.out.println("[0] - Sair");
+        System.out.println("A conta que deseja abrir é para:");
+        System.out.println("[0] - Cancelar");
         System.out.println("[1] - Pessoa Fisica");
         System.out.println("[2] - Pessoa Juridica ");
         tipoPessoa = Integer.parseInt(leitor.nextLine());
