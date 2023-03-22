@@ -24,7 +24,7 @@ public class Aplicacao {
         listaConta = new ArrayList<Conta>();
         int opcaoMenu = 0;
 
-        popularListaConta();
+//        popularListaConta();
         menuPrincipal:
         while (true) {
             // opcaoMenu    -->     [0 = sair]    [1 = abrir conta]      [2 = logar]    [3 - mostrar a lista de conta]  [4 - Organizar por nome ]   [5 - Organizar por idade ]
@@ -91,6 +91,10 @@ public class Aplicacao {
                     break;
                 case 5:
                     Collections.sort(listaConta, Conta.compararPorIdade());
+                    break;
+                default:
+                    System.out.println(opcaoMenu + " não é uma escolha valida!");
+                    System.out.println("########################################################################################");
                     break;
             }
         }
@@ -319,4 +323,29 @@ public class Aplicacao {
         listaConta.add(conta5);
         listaConta.add(conta6);
     }
+
+//    TESTE DE TRANSFERENCIA:
+//
+//    A - PF Corrente
+//    B - PF poupança
+//    C - PF investimento
+//    D - PJ Corrente
+//    E - PJ investimento
+//
+//    A - PF Corrente			nomeA;21;11111111111;11111;111
+//    B - PF poupança			nomeB;19;22222222222;22222;222
+//    C - PF investimento		nomeC;42;33333333333;33333;333
+//    D - PJ Corrente			EmpresaD;44444444444444;44444;444
+//    E - PJ investimento		EmpresaE;55555555555555;55555;555
+//
+//    PF Corrente		-----		PF poupança		= ok
+//    PF Corrente		-----		PF investimento	= ok
+//    PF Corrente		-----		PJ Corrente		= ok
+//    PF Corrente		-----		PJ investimento	= ok
+//    PF poupança		-----		PF investimento	= ok
+//    PF poupança		-----		PJ Corrente		= ok
+//    PF poupança		-----		PJ investimento	= ok
+//    PF investimento	-----		PJ Corrente		= ok
+//    PF investimento	-----		PJ investimento	= ok
+//    PJ Corrente		-----		PJ investimento	= ok
 }
