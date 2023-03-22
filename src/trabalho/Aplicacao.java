@@ -225,8 +225,8 @@ public class Aplicacao {
             System.out.println("[1] - Abrir conta ");
             System.out.println("[2] - Logar ");
             System.out.println("[3] - Mostrar Lista de Conta ");
-            System.out.println("[4] - Organizar por nome ");
-            System.out.println("[5] - Organizar por Idade ");
+            System.out.println("[4] - Organizar por nome (ordem crescente)");
+            System.out.println("[5] - Organizar por Idade (ordem crescente)");
             return Integer.parseInt(leitor.nextLine());
         } catch (NumberFormatException excecao) {
             System.out.println("########################################################################################");
