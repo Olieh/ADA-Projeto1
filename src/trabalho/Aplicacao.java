@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.Scanner;
 
 /*
+    conta instanceof ContaCorrente --> compara se conta é instancia de contaccorente
+
     herança         = (Classe) Conta herda de (Classe) Pessoa
     encapsulamento  = (Classe) Conta & Pessoa
     sobrecarga      = (Classe) Aplicação --> (metodos) cadastrarContaPF() & cadastrarContaPJ()
@@ -32,7 +34,7 @@ public class Aplicacao {
             switch (opcaoMenu) {
                 case 0:
                     System.out.println("########################################################################################");
-                    System.out.println("Saindo do Menu...");
+                    System.out.println("Saindo do dicasAtalhos.Menu...");
                     break menuPrincipal;
                 case 1:
                     int tipoPessoa = 0;
