@@ -1,4 +1,6 @@
-package br.com.ada.first973.aulas.revisaoPOO.collections;
+package modulo3.semana3.aula4.collections;
+
+import modulo3.semana3.aula4.Carro;
 
 import java.util.ArrayList;
 

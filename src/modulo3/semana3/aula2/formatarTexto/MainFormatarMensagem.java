@@ -1,4 +1,6 @@
-package br.com.ada.first973.aulas.revisaoPOO.formatarTexto;
+package modulo3.semana3.aula2.formatarTexto;
+
+import modulo3.semana3.aula4.formatarTexto.*;
 
 import java.util.Scanner;
 

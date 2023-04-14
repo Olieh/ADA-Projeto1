@@ -1,6 +1,8 @@
-package br.com.ada.first973.aulas.revisaoPOO.formatarTexto;
+package modulo3.semana3.aula2.formatarTexto;
 
-public class FormatarMensagemAoContrario implements FormatarMensagem{
+import modulo3.semana3.aula4.formatarTexto.FormatarMensagem;
+
+public class FormatarMensagemAoContrario implements FormatarMensagem {
 
     @Override
     public String formatarMensagem(String mensagem) {

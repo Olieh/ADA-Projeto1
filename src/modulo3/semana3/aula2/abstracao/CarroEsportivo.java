@@ -1,4 +1,6 @@
-package br.com.ada.first973.aulas.revisaoPOO.abstracao;
+package modulo3.semana3.aula2.abstracao;
+
+import modulo3.semana3.aula4.abstracao.VeiculoInterface;
 
 public class CarroEsportivo implements VeiculoInterface {
 
